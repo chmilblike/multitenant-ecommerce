@@ -1,13 +1,16 @@
 import { Category } from '@/payload-types'
 import Link from 'next/link'
+import { CustomCategory } from '../type'
+import { useRouter } from 'next/navigation'
 
 interface Props {
-	category: Category
+	category: CustomCategory
 	isOpen: boolean
 	position: { top: number; left: number }
 }
 
 export const SubcategoryMenu = ({ category, isOpen, position }: Props) => {
+	const router = useRouter()
 	if (
 		!isOpen ||
 		!category.subcategories ||
@@ -32,8 +35,11 @@ export const SubcategoryMenu = ({ category, isOpen, position }: Props) => {
 				<div>
 					{category.subcategories?.map((subcategory: Category) => (
 						<div // le link ne marche pas ici
+							onClick={() =>
+								router.push(`/${category.slug}/${subcategory.slug}`)
+							}
 							key={subcategory.slug}
-							className="w-full text-left p-4 hover:bg-black hover:text-white flex justify-between items-center underline font-medium"
+							className="w-full text-left p-4 hover:bg-black hover:text-white flex justify-between items-center underline font-medium cursor-pointer"
 						>
 							{subcategory.name}
 						</div>
