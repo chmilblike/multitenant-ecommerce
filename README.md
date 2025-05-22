@@ -1,3 +1,7 @@
+## Notes à moi même
+
+Pour faire tourner payload generate:types, ne pas oublier de passer en type:module dans le package.json
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
