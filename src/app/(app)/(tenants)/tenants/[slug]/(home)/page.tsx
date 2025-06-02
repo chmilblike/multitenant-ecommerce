@@ -5,7 +5,7 @@ import { getQueryClient, trpc } from '@/trpc/server'
 
 import { loadProductFilters } from '@/modules/products/search-params'
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query'
-import { ProductListView } from '@/modules/products/ui/components/views/product-list-view'
+import { ProductListView } from '@/modules/products/ui/views/product-list-view'
 
 interface Props {
 	searchParams: Promise<SearchParams>

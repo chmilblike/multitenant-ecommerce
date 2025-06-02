@@ -1,4 +1,4 @@
-import { ProductView } from '@/modules/products/ui/components/views/product-view'
+import { ProductView } from '@/modules/products/ui/views/product-view'
 import { getQueryClient, trpc } from '@/trpc/server'
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query'
 
