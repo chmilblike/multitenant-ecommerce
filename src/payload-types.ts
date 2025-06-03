@@ -172,7 +172,7 @@ export interface Tenant {
   /**
    * Stripe account id connected to your shop
    */
-  stripAccountId: string;
+  stripeAccountId: string;
   /**
    * You cannot create products until you submit your Stripe details
    */
@@ -218,6 +218,8 @@ export interface Category {
   createdAt: string;
 }
 /**
+ * You must verify yout account before creating products
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "products".
  */
@@ -265,6 +267,10 @@ export interface Order {
    * Checkout session associated with this order
    */
   stripeCheckoutSessionId: string;
+  /**
+   * Stripe account associated with this order
+   */
+  stripeAccountId?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -451,7 +457,7 @@ export interface TenantsSelect<T extends boolean = true> {
   name?: T;
   slug?: T;
   image?: T;
-  stripAccountId?: T;
+  stripeAccountId?: T;
   stripDetailsSubmitted?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -465,6 +471,7 @@ export interface OrdersSelect<T extends boolean = true> {
   user?: T;
   product?: T;
   stripeCheckoutSessionId?: T;
+  stripeAccountId?: T;
   updatedAt?: T;
   createdAt?: T;
 }
