@@ -131,7 +131,7 @@ export const ReviewForm = ({ productId, initialData }: Props) => {
 				{!isPreview && (
 					<Button
 						variant="elevated"
-						disabled={false}
+						disabled={createReview.isPending || updateReview.isPending}
 						type="submit"
 						size="lg"
 						className="bg-black text-white hover:bg-pink-400 hover:text-primary w-fit"
