@@ -1,6 +1,3 @@
-import { getPayload } from 'payload'
-import configPromise from '@payload-config'
-
 import { Category } from '@/payload-types'
 import { baseProcedure, createTRPCRouter } from '@/trpc/init'
 

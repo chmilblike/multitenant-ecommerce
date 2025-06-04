@@ -45,7 +45,7 @@ export const useCart = (tenantSlug: string) => {
 		(productId: string) => {
 			removeProduct(tenantSlug, productId)
 		},
-		[addProduct, tenantSlug]
+		[removeProduct, tenantSlug]
 	)
 
 	return {

@@ -1,4 +1,4 @@
-import payload, { getPayload } from 'payload'
+import { getPayload } from 'payload'
 import config from '@payload-config'
 import { stripe } from './lib/stripe'
 
